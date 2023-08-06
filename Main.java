@@ -8,7 +8,7 @@ public class Main {
 
         while (true) {
             Scanner scanner = new Scanner(System.in);
-            System.out.print("Введите данные одной строкой, разделенные пробелом: ");
+            System.out.print("Введите данные одной строкой, разделенные пробелами: ");
             String userData = scanner.nextLine();
 
             if (!userData.isEmpty()) {
