@@ -14,10 +14,11 @@ public class ValidateData {
     }
 
     public String preformatDataForWriting(String userData) {
-        String[] userDataArray = userData.trim().split("\\s+");
         StringBuilder outputData = new StringBuilder();
 
         if (isValid) {
+            String[] userDataArray = userData.split("\\s+");
+
             for (String item : userDataArray) {
                 outputData.append("<").append(item).append(">");
             }
@@ -26,7 +27,6 @@ public class ValidateData {
     }
 
     public boolean checkUserData(String userData) {
-
         String[] userDataArray = userData.trim().split("\\s+");
 
         if (userDataArray.length == FIELDS) {
