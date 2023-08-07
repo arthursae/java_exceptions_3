@@ -14,7 +14,7 @@ public class Main {
             if (!userData.isEmpty()) {
                 ValidateData validate = new ValidateData();
                 if (validate.checkUserData(userData)) {
-                    String[] userDataArray = userData.trim().split("\\s+");
+                    String[] userDataArray = userData.split("\\s+");
                     String filename = userDataArray[0];
                     String preformatted = validate.preformatDataForWriting(userData);
                     textFile.writeToFile(filename + ".txt", preformatted);
